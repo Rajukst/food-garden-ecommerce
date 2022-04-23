@@ -1,0 +1,21 @@
+.container {
+    border: none;
+   background: none; 
+
+}
+.card-body{
+    text-align: justify;
+}
+.container:hover{
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    border-radius: 12px;
+    transition: 0.3s;
+}
+.cart-button{
+ border: none;
+ background: none;
+
+}
+.my-cart{
+    color: black;
+}

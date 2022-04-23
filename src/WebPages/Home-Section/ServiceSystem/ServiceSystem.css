@@ -1,0 +1,6 @@
+.service-div{
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}

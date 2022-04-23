@@ -1,0 +1,10 @@
+.myDiscount{
+    background-color: aqua;
+    border-radius: 10px;
+}
+.myDiv{
+    display: flex;
+    text-align: left;
+    align-items: center;
+   justify-content: space-around;
+}
