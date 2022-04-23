@@ -13,7 +13,7 @@ const SnacksAndBeverage = () => {
         <Container fluid>
         <div className="featured">
         <h1>This is Vegetables Component</h1>
-        <Row xs={12} md={5} className="g-4 m-2">
+        <Row xs={12} md={2} lg={4} className="g-4 m-2">
         {snacks.filter(getFilterSnacks=> getFilterSnacks.tag==='snacks').map(filteredSnacks => (
        <FillteredSnacks
        key={filteredSnacks._id}

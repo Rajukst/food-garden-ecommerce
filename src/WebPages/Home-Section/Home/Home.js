@@ -9,7 +9,7 @@ import ServiceSystem from '../ServiceSystem/ServiceSystem';
 const Home = () => {
     return (
         <div>
-            <HomeBanner></HomeBanner>
+          
             <HomeProducts></HomeProducts>
             <FeaturedProducts></FeaturedProducts>
             <DiscountCarosul></DiscountCarosul>

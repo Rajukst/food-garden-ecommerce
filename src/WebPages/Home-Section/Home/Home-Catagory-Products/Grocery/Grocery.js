@@ -1,24 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row } from 'react-bootstrap';
-import FilterFruits from './FilterFruits';
+import FilteredGrocery from './FilteredGrocery';
 
-const Fruits = () => {
-    const [filterProduct, setFilterProduct]= useState([])
+const Grocery = () => {
+    const [grocery, setGrocery]= useState([])
     useEffect(()=>{
         fetch(`http://localhost:5000/all-products`)
         .then(res=>res.json())
-        .then(data=>setFilterProduct(data))
+        .then(data=>setGrocery(data))
     },[])
     return (
         <Container fluid>
         <div className="featured">
         <h1>This is Fruits Component</h1>
         <Row xs={12} md={2} lg={4} className="g-4 m-2">
-        {filterProduct.filter(product=> product.tag==='fruits').map(filteredPerson => (
-       <FilterFruits
-       key={filteredPerson._id}
-       getFruits={filteredPerson}
-       ></FilterFruits>
+        {grocery.filter(groceryProduct=> groceryProduct.tag==='grocery').map(filteredGrocery => (
+       <FilteredGrocery
+       key={filteredGrocery._id}
+       getGrocery={filteredGrocery}
+       ></FilteredGrocery>
       ))}
   </Row>
     </div>
@@ -26,7 +26,4 @@ const Fruits = () => {
     );
 };
 
-export default Fruits;
-
-
-
+export default Grocery;

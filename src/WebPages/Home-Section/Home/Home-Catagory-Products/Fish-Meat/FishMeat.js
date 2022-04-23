@@ -13,7 +13,7 @@ const FishMeat = () => {
         <Container fluid>
         <div className="featured">
         <h1>This is Vegeta Component</h1>
-        <Row xs={12} md={5} className="g-4 m-2">
+        <Row xs={12} md={2} lg={4} className="g-4 m-2">
         {fishMeat.filter(getFilterFishMeat=> getFilterFishMeat.tag==='fish').map(filteredFishMeat => (
        <FilteredFishMeat
        key={filteredFishMeat._id}

@@ -7,6 +7,7 @@ import AddProduct from "./WebPages/Home-Section/Add-Product/AddProduct";
 import Home from "./WebPages/Home-Section/Home/Home";
 import FishMeat from "./WebPages/Home-Section/Home/Home-Catagory-Products/Fish-Meat/FishMeat";
 import Fruits from "./WebPages/Home-Section/Home/Home-Catagory-Products/Fruits/Fruits";
+import Grocery from "./WebPages/Home-Section/Home/Home-Catagory-Products/Grocery/Grocery";
 import SnacksAndBeverage from "./WebPages/Home-Section/Home/Home-Catagory-Products/Snacks-And-Beverage/SnacksAndBeverage";
 import Vegetables from "./WebPages/Home-Section/Home/Home-Catagory-Products/Vegetables/Vegetables";
 
@@ -33,6 +34,9 @@ function App() {
           </Route>
           <Route path="/meat-fish">
             <FishMeat></FishMeat>
+          </Route>
+          <Route path="/grocery">
+            <Grocery></Grocery>
           </Route>
           <Route path="/add-product">
             <AddProduct></AddProduct>

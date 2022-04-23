@@ -13,9 +13,8 @@ const FeaturedProducts = () => {
        <Container fluid>
             <div className="featured">
             <h1>This is Featured Product</h1>
-            <Row xs={12} md={5} className="g-4 m-2">
-             <h1> {product.length}</h1>
-            {product.map((getTestResult) => (
+            <Row xs={12} md={2} lg={5} className="g-4 m-2">
+            {product.slice(0, 12).map((getTestResult) => (
           <SingleFeaturedProduct
             key={getTestResult._id}
             getProduct={getTestResult}

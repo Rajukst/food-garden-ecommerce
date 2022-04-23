@@ -1,4 +1,3 @@
-
 import React, { useRef } from "react";
 import { Button } from "react-bootstrap";
 import Swal from "sweetalert2";
@@ -18,7 +17,7 @@ const AddProduct = () => {
     const price = productPrice.current.value;
     const tag = tagName.current.value;
     const quantity = quantityName.current.value;
-    const totalBio = { name, image, price, description, tag, quantity};
+    const totalBio = { name, image, price, description, tag, quantity };
     console.log(totalBio);
     fetch("http://localhost:5000/add-products", {
       method: "POST",
@@ -73,6 +72,7 @@ const AddProduct = () => {
           <option value="fish">Fish & Meat</option>
           <option value="snacks">Snacks & Beverages</option>
           <option value="fruits">Fruits</option>
+          <option value="grocery">Grocery</option>
         </select>
         <br />
         <br />
