@@ -1,10 +1,15 @@
 .container {
     border: none;
-   background: none; 
-
+   background: none;
+}
+.card-title{
+    
+    color: black;
 }
 .card-body{
     text-align: justify;
+    
+   
 }
 .container:hover{
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -18,4 +23,8 @@
 }
 .my-cart{
     color: black;
+}
+.my-carts{
+    color: black;
+    text-decoration: none;
 }

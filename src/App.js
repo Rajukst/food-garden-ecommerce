@@ -10,6 +10,7 @@ import Fruits from "./WebPages/Home-Section/Home/Home-Catagory-Products/Fruits/F
 import Grocery from "./WebPages/Home-Section/Home/Home-Catagory-Products/Grocery/Grocery";
 import SnacksAndBeverage from "./WebPages/Home-Section/Home/Home-Catagory-Products/Snacks-And-Beverage/SnacksAndBeverage";
 import Vegetables from "./WebPages/Home-Section/Home/Home-Catagory-Products/Vegetables/Vegetables";
+import SingleItemProduct from "./WebPages/Home-Section/Home/SingleItemProduct/SingleItemProduct";
 
 function App() {
   return (
@@ -37,6 +38,9 @@ function App() {
           </Route>
           <Route path="/grocery">
             <Grocery></Grocery>
+          </Route>
+          <Route path="/single-item/:serviceId">
+            <SingleItemProduct></SingleItemProduct>
           </Route>
           <Route path="/add-product">
             <AddProduct></AddProduct>
