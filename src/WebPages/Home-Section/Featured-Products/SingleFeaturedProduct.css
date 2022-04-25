@@ -20,6 +20,7 @@
  border: none;
  background: none;
 
+
 }
 .my-cart{
     color: black;
@@ -27,4 +28,9 @@
 .my-carts{
     color: black;
     text-decoration: none;
+}
+.icon-button{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
 }

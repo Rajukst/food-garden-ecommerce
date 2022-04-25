@@ -11,7 +11,15 @@ const FillteredSnacks = ({getSnacks}) => {
             <div className="aaaaa">
               <div className="card border-0">
                 <div className="card-body">
-                  <button className="cart-button">Add to Cart </button>
+                <div className="icon-button">
+                    <div>
+                      <button title="Add to cart"
+                        className="cart-button"
+                      >
+                        <i className="fa-solid fa-cart-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                   <img
                     src={image}
                     className="img-fluid p-1"

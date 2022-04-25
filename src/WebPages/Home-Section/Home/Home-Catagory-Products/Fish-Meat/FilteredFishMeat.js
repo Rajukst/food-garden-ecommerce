@@ -1,17 +1,23 @@
 import React from "react";
-import { Col } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 
 const FilteredFishMeat = ({ getfishMeat }) => {
   const { name, price, image, description, quantity } = getfishMeat;
   return (
-    <div>
+    <Container fluid>
       <Col>
         <div className="container">
           <div className="row">
             <div className="aaaaa">
               <div className="card border-0">
                 <div className="card-body">
-                  <button className="cart-button">Add to Cart </button>
+                  <div className="icon-button">
+                    <div>
+                      <button title="Add to cart" className="cart-button">
+                        <i className="fa-solid fa-cart-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                   <img
                     src={image}
                     className="img-fluid p-1"
@@ -28,7 +34,7 @@ const FilteredFishMeat = ({ getfishMeat }) => {
           </div>
         </div>
       </Col>
-    </div>
+    </Container>
   );
 };
 

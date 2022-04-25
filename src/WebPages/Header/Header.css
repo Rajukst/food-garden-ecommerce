@@ -1,29 +1,14 @@
-.banner-image{
-    background-size: cover;
-    background-image: url("../../Images/banner-image.jpg");
-}
-.my-button{
-    border: none;
-    background: none;
-}
-.header{
-    width: 100%;
-    background-color: rgba(204, 202, 202, 0.1);
-}
-.header ul{
-    text-align: center;
-}
-.header ul li {
-    list-style: none;
-    display: inline-block;
-}
-.header ul li a{
-    display: block;
+
+a{
     text-decoration: none;
-    text-transform: uppercase;
-    color: #fff;
+    color: aquamarine;
     font-size: 20px;
-    letter-spacing: 2px;
-    font-weight: 600;
-    padding: 25px;
+    margin-left: 25px;
+}
+.header-image{
+    width: 300px;
+    height: 60px;
+}
+.shopping-cart{
+  color: aliceblue;
 }

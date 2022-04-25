@@ -3,7 +3,7 @@ import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 import "./SingleFeaturedProduct.css";
-const SingleFeaturedProduct = ({ getProduct,handleClick }) => {
+const SingleFeaturedProduct = ({ getProduct, handleClick }) => {
   const { _id, name, price, image, description, quantity } = getProduct;
   return (
     <div>
@@ -13,8 +13,16 @@ const SingleFeaturedProduct = ({ getProduct,handleClick }) => {
             <div className="aaaaa">
               <div className="card border-0">
                 <div className="card-body">
-                 
-
+                  <div className="icon-button">
+                    <div>
+                      <button title="Add to cart"
+                        onClick={() => handleClick(getProduct)}
+                        className="cart-button"
+                      >
+                        <i className="fa-solid fa-cart-plus"></i>
+                      </button>
+                    </div>
+                  </div>
                   <Link to={`/single-item/${_id}`}>
                     <img
                       src={image}
@@ -29,11 +37,8 @@ const SingleFeaturedProduct = ({ getProduct,handleClick }) => {
                   <p className="card-text my-carts">
                     {description.slice(0, 100)}...
                   </p>
-                  <button onClick={()=>handleClick(getProduct)} className="cart-button">Add to Cart </button>
                 </div>
-                
               </div>
-            
             </div>
           </div>
         </div>
