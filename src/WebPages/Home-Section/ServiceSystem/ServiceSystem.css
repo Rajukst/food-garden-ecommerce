@@ -1,6 +1,13 @@
+.delevary-div{
+    text-align: left;
+    margin-left: 10px;
+}
 .service-div{
     display: flex;
-    text-align: left;
     align-items: center;
-    justify-content: center;
+
+    
+}
+.delevary-div p{
+    line-height: 10px;
 }

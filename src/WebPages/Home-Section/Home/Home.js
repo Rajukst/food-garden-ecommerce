@@ -5,6 +5,7 @@ import FeaturedProducts from '../Featured-Products/FeaturedProducts';
 import HomeProducts from '../Home-Products/HomeProducts';
 import HomeBanner from '../HomeNavBar/HomeBanner';
 import ServiceSystem from '../ServiceSystem/ServiceSystem';
+import Project from './Project/Project';
 
 const Home = () => {
     return (
@@ -14,6 +15,7 @@ const Home = () => {
             <FeaturedProducts></FeaturedProducts>
             <DiscountCarosul></DiscountCarosul>
             <DiscountOffer></DiscountOffer>
+            <Project></Project>
             <ServiceSystem></ServiceSystem>
         </div>
     );
