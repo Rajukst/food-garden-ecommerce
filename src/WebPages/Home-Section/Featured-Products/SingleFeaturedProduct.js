@@ -8,7 +8,7 @@ const SingleFeaturedProduct = ({ getProduct, handleClick }) => {
   return (
     <div>
       <Col>
-        <div className="container">
+        <div className="containers">
           <div className="row">
             <div className="aaaaa">
               <div className="card border-0">

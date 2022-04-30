@@ -9,7 +9,7 @@ const ServiceSystem = () => {
         <Col xs={12} md={6} lg={3}>
     <div className="service-div mt-4">
     <div className="icon-div">
-     <i class="fa-solid fa-truck fa-3x"></i>
+     <i className="fa-solid fa-truck fa-3x"></i>
      </div>
       <div className="delevary-div">
       <p>Free Delivery</p>
@@ -20,7 +20,7 @@ const ServiceSystem = () => {
         <Col xs={12} md={6} lg={3}>
     <div className="service-div mt-4">
     <div className="icon-div">
-    <i class="fa-solid fa-arrow-rotate-right fa-3x"></i>
+    <i className="fa-solid fa-arrow-rotate-right fa-3x"></i>
      </div>
       <div className="delevary-div">
       <p>Refundable</p>
@@ -31,7 +31,7 @@ const ServiceSystem = () => {
         <Col xs={12} md={6} lg={3}>
     <div className="service-div mt-4">
     <div className="icon-div">
-    <i class="fa-solid fa-user-shield fa-3x"></i>
+    <i className="fa-solid fa-user-shield fa-3x"></i>
      </div>
       <div className="delevary-div">
       <p>Secure Payment</p>
@@ -42,7 +42,7 @@ const ServiceSystem = () => {
         <Col xs={12} md={6} lg={3}>
     <div className="service-div mt-4">
     <div className="icon-div">
-    <i class="fa-solid fa-headset fa-3x"></i>
+    <i className="fa-solid fa-headset fa-3x"></i>
      </div>
       <div className="delevary-div">
       <p>24/7 Customer Support</p>

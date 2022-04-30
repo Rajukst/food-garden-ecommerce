@@ -2,6 +2,8 @@ import { Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+import Dashboard from "./WebPages/Dashboard/Dashboard-Main/Dashboard";
+import Footer from "./WebPages/Footer/Footer";
 import Header from "./WebPages/Header/Header";
 import AddProduct from "./WebPages/Home-Section/Add-Product/AddProduct";
 import Home from "./WebPages/Home-Section/Home/Home";
@@ -45,7 +47,11 @@ function App() {
           <Route path="/add-product">
             <AddProduct></AddProduct>
           </Route>
+          <Route path="/dashboard">
+            <Dashboard></Dashboard>
+          </Route>
         </Switch>
+        <Footer></Footer>
       </BrowserRouter>
     </div>
   );

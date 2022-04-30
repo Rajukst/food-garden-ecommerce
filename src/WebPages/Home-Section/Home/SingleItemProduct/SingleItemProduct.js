@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
-
+import "./SingleItemProduct.css";
 const SingleItemProduct = () => {
   // increment
   let [num, setNum] = useState(0);
@@ -30,49 +30,23 @@ const SingleItemProduct = () => {
     <>
       <Container fluid>
         <Row>
-          <Col>
-            <div>
-              <img src={singleItem.image} alt="Girl in a jacket" />
-              <div className="col-xl-2 align-center">
-                <div class="input-group">
-                  <div class="input-group-prepend">
-                    <button
-                      class="btn btn-outline-primary"
-                      type="button"
-                      onClick={decNum}
-                    >
-                      -
-                    </button>
-                  </div>
-                  <input
-                    type="text"
-                    class="form-control"
-                    value={num}
-                    onChange={handleChange}
-                  />
-                  <div class="input-group-prepend">
-                    <button
-                      class="btn btn-outline-primary"
-                      type="button"
-                      onClick={incNum}
-                    >
-                      +
-                    </button>
-                  </div>
-                </div>
-              </div>
+          <Col xs={12} sm={12} md={5} lg={5}>
+            <div className="left-item">
+              <img className="img-fluid" src={singleItem.image} alt="" />
             </div>
-
-            <Button>Add To Cart</Button>
           </Col>
-          <Col>
-            <div className="my-dash">
-              <h3>{singleItem.name}</h3>
-              <h3>
-                {singleItem.price} taka per {singleItem.quantity}
-              </h3>
-              <h3>{singleItem.tag}</h3>
-              <p>{singleItem.description}</p>
+          <Col xs={12} sm={12} md={7} lg={7}>
+            <div className="right-item">
+              <div className="product-information">
+                <h4 className="card-title"> Product Name: {singleItem.name}</h4>
+                <h6 className="card-subtitle mb-2 text-muted">
+                  {singleItem.price} taka per {singleItem.quantity}
+                </h6>
+                <p className="card-text my-carts description-box">
+                  <span className="my-span">Product Info:</span>{" "}
+                  {singleItem.description}
+                </p>
+              </div>
             </div>
           </Col>
         </Row>
