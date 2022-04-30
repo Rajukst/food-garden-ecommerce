@@ -41,7 +41,7 @@ const SingleItemProduct = () => {
     <>
       <Container fluid>
         <Row>
-          <Col xs={12} sm={12} md={5} lg={5}>
+          <Col xs={12} sm={12} md={4} lg={4}>
             <div className="left-item">
               <ReactImageMagnify
                 {...{
@@ -52,14 +52,14 @@ const SingleItemProduct = () => {
                   },
                   largeImage: {
                     src: singleItem.image,
-                    width: 1200,
-                    height: 1800,
+                    width: 800,
+                    height: 1200,
                   },
                 }}
               />
             </div>
           </Col>
-          <Col xs={12} sm={12} md={7} lg={7}>
+          <Col xs={12} sm={12} md={8} lg={8}>
             <div className="right-item">
               <div className="product-information">
                 <h4 className="card-title"> Product Name: {singleItem.name}</h4>

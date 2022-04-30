@@ -6,6 +6,7 @@ import Dashboard from "./WebPages/Dashboard/Dashboard-Main/Dashboard";
 import Footer from "./WebPages/Footer/Footer";
 import Header from "./WebPages/Header/Header";
 import AddProduct from "./WebPages/Home-Section/Add-Product/AddProduct";
+import AllProduct from "./WebPages/Home-Section/All-Product/Search-GetProduct/AllProduct";
 import Home from "./WebPages/Home-Section/Home/Home";
 import FishMeat from "./WebPages/Home-Section/Home/Home-Catagory-Products/Fish-Meat/FishMeat";
 import Fruits from "./WebPages/Home-Section/Home/Home-Catagory-Products/Fruits/Fruits";
@@ -46,6 +47,9 @@ function App() {
           </Route>
           <Route path="/add-product">
             <AddProduct></AddProduct>
+          </Route>
+          <Route path="/all-products">
+            <AllProduct></AllProduct>
           </Route>
           <Route path="/dashboard">
             <Dashboard></Dashboard>
