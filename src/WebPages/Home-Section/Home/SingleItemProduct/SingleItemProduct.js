@@ -1,22 +1,33 @@
 import React, { useEffect, useState } from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import { useParams } from "react-router-dom";
+import ReactImageMagnify from "react-image-magnify";
+
 import "./SingleItemProduct.css";
 const SingleItemProduct = () => {
   // increment
-  let [num, setNum] = useState(0);
-  let incNum = () => {
-    if (num < 100) {
-      setNum(Number(num) + 1);
-    }
+  const [count, setCount] = useState(1);
+  const maxGuests = 100;
+  const minGuests = 0;
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
   };
-  let decNum = () => {
-    if (num > 0) {
-      setNum(num - 1);
-    }
+  const handleCount = (e) => {
+    if (e > maxGuests) {
+      setCount(maxGuests);
+    } else if (e < minGuests) {
+      setCount(minGuests);
+    } else setCount(e);
   };
-  let handleChange = (e) => {
-    setNum(e.target.value);
+
+  const decrementCount = () => {
+    if (count > minGuests) setCount(count - 1);
+  };
+
+  const incrementCount = () => {
+    if (count < maxGuests) setCount(count + 1);
+    else if (count > maxGuests) setCount(maxGuests);
   };
   // increment done
   const { serviceId } = useParams();
@@ -32,7 +43,20 @@ const SingleItemProduct = () => {
         <Row>
           <Col xs={12} sm={12} md={5} lg={5}>
             <div className="left-item">
-              <img className="img-fluid" src={singleItem.image} alt="" />
+              <ReactImageMagnify
+                {...{
+                  smallImage: {
+                    alt: "Wristwatch by Ted Baker London",
+                    isFluidWidth: true,
+                    src: singleItem.image,
+                  },
+                  largeImage: {
+                    src: singleItem.image,
+                    width: 1200,
+                    height: 1800,
+                  },
+                }}
+              />
             </div>
           </Col>
           <Col xs={12} sm={12} md={7} lg={7}>
@@ -48,6 +72,36 @@ const SingleItemProduct = () => {
                 </p>
               </div>
             </div>
+            <form onSubmit={handleSubmit}>
+              <div className="my-counter">
+                <input
+                  type="button"
+                  onClick={() => decrementCount()}
+                  value="-"
+                  className="cursor-pointer"
+                />
+                <input
+                  required
+                  type="number"
+                  name="counter"
+                  value={count}
+                  onChange={(event) => {
+                    handleCount(event.target.value);
+                  }}
+                />
+                <input
+                  type="button"
+                  onClick={() => incrementCount()}
+                  value="+"
+                  className="cursor-pointer"
+                />
+              </div>
+              <div className="class-div">
+                <button type="submit" variant="outline-info">
+                  Add To Cart
+                </button>
+              </div>
+            </form>
           </Col>
         </Row>
       </Container>

@@ -10,3 +10,15 @@
     text-align: justify;
 
 }
+.my-counter{
+    text-align: left;
+    
+}
+.my-counter input{
+    width: 60px;
+    margin-top: 5px;
+}
+.class-div{
+    margin-top: 15px;
+    text-align: left;
+}
