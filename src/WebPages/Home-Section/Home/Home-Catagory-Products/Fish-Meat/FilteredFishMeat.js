@@ -3,7 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const FilteredFishMeat = ({ getfishMeat }) => {
-  const {_id, name, price, image, description, quantity } = getfishMeat;
+  const { _id, name, price, image, description, quantity } = getfishMeat;
   return (
     <Container fluid>
       <Col>
@@ -20,14 +20,12 @@ const FilteredFishMeat = ({ getfishMeat }) => {
                     </div>
                   </div>
                   <Link to={`/single-item/${_id}`}>
-                  <img
-                    src={image}
-                    className="img-fluid p-1"
-                    alt="Girl in a jacket"
-                  />
-
+                    <img
+                      src={image}
+                      className="img-fluid p-1"
+                      alt="Girl in a jacket"
+                    />
                   </Link>
-               
                   <h4 className="card-title">{name}</h4>
                   <h6 className="card-subtitle mb-2 text-muted">
                     {price} taka per {quantity}

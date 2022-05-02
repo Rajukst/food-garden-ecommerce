@@ -52,8 +52,8 @@ const SingleItemProduct = () => {
                   },
                   largeImage: {
                     src: singleItem.image,
-                    width: 800,
-                    height: 1200,
+                    width: 1200,
+                    height: 1800,
                   },
                 }}
               />

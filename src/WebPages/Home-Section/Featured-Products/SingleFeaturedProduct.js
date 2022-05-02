@@ -1,13 +1,16 @@
 import React from "react";
 import { Card, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import "./SingleFeaturedProduct.css";
 const SingleFeaturedProduct = ({ getProduct, handleClick }) => {
+  AOS.init();
   const { _id, name, price, image, description, quantity } = getProduct;
   return (
     <div>
       <Col>
+      <div data-aos="zoom-in">
         <div className="containers">
           <div className="row">
             <div className="aaaaa">
@@ -41,6 +44,7 @@ const SingleFeaturedProduct = ({ getProduct, handleClick }) => {
               </div>
             </div>
           </div>
+        </div>
         </div>
       </Col>
     </div>

@@ -1,0 +1,13 @@
+.input-searchBox {
+  display: flex;
+  align-items: center;
+}
+.searchBox {
+  width: 60%;
+  margin: auto;
+}
+.input-toggle {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
