@@ -2,6 +2,7 @@ import { Switch } from "react-router-dom";
 import { Route } from "react-router-dom";
 import { BrowserRouter } from "react-router-dom";
 import "./App.css";
+
 import Dashboard from "./WebPages/Dashboard/Dashboard-Main/Dashboard";
 import Footer from "./WebPages/Footer/Footer";
 import Header from "./WebPages/Header/Header";
@@ -15,8 +16,11 @@ import SnacksAndBeverage from "./WebPages/Home-Section/Home/Home-Catagory-Produc
 import Vegetables from "./WebPages/Home-Section/Home/Home-Catagory-Products/Vegetables/Vegetables";
 import SingleItemProduct from "./WebPages/Home-Section/Home/SingleItemProduct/SingleItemProduct";
 
+
+
 function App() {
   return (
+    
     <div className="App">
       <BrowserRouter>
         <Header></Header>
@@ -58,6 +62,7 @@ function App() {
         <Footer></Footer>
       </BrowserRouter>
     </div>
+   
   );
 }
 
