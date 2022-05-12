@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import "./SingleFeaturedProduct.css";
-const SingleFeaturedProduct = ({ getProduct, handleClick }) => {
+const SingleFeaturedProduct = ({ getProduct ,  handleClick}) => {
   AOS.init();
   const { _id, name, price, image, description, quantity } = getProduct;
   return (

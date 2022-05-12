@@ -1,22 +1,29 @@
 import React, { useEffect, useState } from "react";
-import { Button, Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row } from "react-bootstrap";
 import SetAllProduct from "./SetAllProduct";
 import "./AllProduct.css";
+import Cart from "../../Cart/Cart";
 const AllProduct = () => {
   const [allProduct, setAllProduct] = useState([]);
-  const [filter, setFilter]= useState('')
+  const [filter, setFilter]= useState('');
+  const [cart, setCart]= useState([]);
+
   useEffect(() => {
     fetch(`http://localhost:5000/all-products`)
       .then((res) => res.json())
       .then((data) => setAllProduct(data));
   }, []);
 
+  const handleAddToCart=(allProducts)=>{
+  const newCart=[...cart, allProducts]
+  setCart(newCart)
+  }
   return (
     <>
       <div className="input-searchBox mt-3 mb-3">
         <div className="searchBox">
           <input
-            class="form-control"
+            className="form-control"
             type="text"
             placeholder="Search any product..."
             onChange={(e)=>setFilter(e.target.value)}
@@ -26,7 +33,9 @@ const AllProduct = () => {
       <Container fluid>
         <Row>
           <Col xs={12} md={2} lg={2}>
-            <h2>my Selection</h2>
+           {/* send data to cart component  */}
+           <Cart myCart={cart}></Cart>
+           
           </Col>
           <Col xs={12} md={10} lg={10}>
             <div className="featured">
@@ -43,6 +52,7 @@ const AllProduct = () => {
                   <SetAllProduct
                     key={allProducts._id}
                     getProducts={allProducts}
+                    addToCart={handleAddToCart}
                   ></SetAllProduct>
                 ))}
               </Row>

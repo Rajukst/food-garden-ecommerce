@@ -14,8 +14,8 @@ const FeaturedProducts = () => {
     },[])
 
     const handleOnClick=(getTestResult)=>{
-      cart.push(getTestResult)
-      console.log(cart)
+      
+      console.log(getTestResult)
     }
 
     return (

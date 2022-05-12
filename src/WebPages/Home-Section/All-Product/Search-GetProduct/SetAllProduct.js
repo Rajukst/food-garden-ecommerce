@@ -2,7 +2,8 @@ import React from 'react';
 import { Col, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
-const SetAllProduct = ({getProducts}) => {
+const SetAllProduct = ({getProducts,  addToCart}) => {
+  
     const { _id, name, price, image, description, quantity } = getProducts;
     return (
         <>
@@ -16,7 +17,9 @@ const SetAllProduct = ({getProducts}) => {
                   <div className="card-body">
                     <div className="icon-button">
                       <div>
-                        <button title="Add to cart" className="cart-button">
+                        <button
+                        onClick={()=>addToCart(getProducts)}
+                        title="Add to cart" className="cart-button">
                           <i className="fa-solid fa-cart-plus"></i>
                         </button>
                       </div>
